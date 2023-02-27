@@ -1,3 +1,10 @@
+ *{
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box
+}
+html{
+  height: 100%;
+}
 body{
    background-image: url('assets/groot_3840x2400.jpg');
    background-repeat: no-repeat;
@@ -5,11 +12,18 @@ body{
    background-color: #5f514e;
    font-family: 'Jost-Light', sans-serif;
   color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 /*.mainheaderlogo {
 border: 2px solid white;
 /*box-shadow: 0 0 15px black;
 }*/
+header{
+  /* 0 flex-grow, 0 flex-shrink, auto flex-basis */
+   flex: 0 0 auto;
+}
 .page-header{
   background-color: rgba(255, 255, 255, 0.1);
   padding: 0 15px;
@@ -17,6 +31,10 @@ border: 2px solid white;
   display: inline-flex;
    justify-content: space-between;
    width: 100vw;
+}
+.main-content{
+   /* 1 flex-grow, 0 flex-shrink, auto flex-basis */
+   flex: 1 0 auto;
 }
 /*nav {
   border: 5px solid black;
@@ -53,7 +71,7 @@ background:rgba(255,255,255, 0.1);
   background:rgba(156,252,83, 0.5);}
 
 .zakaz{
- border: 2px solid yellow;
+ /*border: 2px solid yellow;*/
 display: flex;
 min-height: 80vh;
 align-items: center;
@@ -71,14 +89,16 @@ font-size: 24px;
 line-height: 28px;
 color: #FFFFFF;
 }
-
-.page-footer{
-  border: 2px solid orange;
-
+footer{
+   /* 0 flex-grow, 0 flex-shrink, auto flex-basis */
+   flex: 0 0 auto;
 }
+/*.page-footer{
+  border: 2px solid orange;
+}*/
 
 .social{
 padding: 5px;
 margin: 20px;
-border:2px solid violet;
+/*border:2px solid violet;*/
 }
